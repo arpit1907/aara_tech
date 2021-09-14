@@ -253,11 +253,9 @@ class _SignUpState extends State<SignUp> {
       } else {
         print(" ${resposne['message']}");
       }
-      scaffoldMessenger
-          .showSnackBar(SnackBar(content: Text("${resposne['message']}")));
+      _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text("${resposne['message']}")));
     } else {
-      scaffoldMessenger
-          .showSnackBar(SnackBar(content: Text("Please Try again")));
+       _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text("Please Try again")));
     }
   }
 
